@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro en Seminarios</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='styles.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Registro en Seminarios</h1>
+        <form action="/" method="POST">
+            <div class="form-section">
+                <label for="fecha">Fecha:</label>
+                <input type="date" id="fecha" name="fecha" required>
+            </div>
+
+            <div class="form-section">
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" required>
+            </div>
+
+            <div class="form-section">
+                <label for="apellidos">Apellidos:</label>
+                <input type="text" id="apellidos" name="apellidos" required>
+            </div>
+
+            <div class="form-section">
+                <label>Turno:</label>
+                <input type="radio" id="mañana" name="turno" value="Mañana" required>
+                <label for="mañana">Mañana</label>
+                <input type="radio" id="tarde" name="turno" value="Tarde" required>
+                <label for="tarde">Tarde</label>
+                <input type="radio" id="noche" name="turno" value="Noche" required>
+                <label for="noche">Noche</label>
+            </div>
+
+            <div class="form-section">
+                <label>Seminarios Disponibles:</label>
+                <input type="checkbox" name="seminarios" value="Inteligencia Artificial"> Inteligencia Artificial<br>
+                <input type="checkbox" name="seminarios" value="Machine Learning"> Machine Learning<br>
+                <input type="checkbox" name="seminarios" value="Simulación con Arena"> Simulación con Arena<br>
+                <input type="checkbox" name="seminarios" value="Robótica Educativa"> Robótica Educativa<br>
+            </div>
+
+            <div class="form-section">
+                <input type="submit" value="Enviar Registro">
+            </div>
+        </form>
+    </div>
+</body>
+</html>
